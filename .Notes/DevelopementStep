@@ -1,0 +1,43 @@
+install angular
+-------------- => npm install -g @angular/cli@10.0.4
+
+Schematic Workflow
+-----------------
+del project folder
+npm cache clean --force
+npm update 
+ng new DemoNissan2023 --skip install
+
+cd DemoNissan2023
+
+Run terminal in vsCode
+-----------------
+                    npm install 
+                    ng server --open
+                    
+---------------------------------------------------------------------
+Angular
+
+        -- compmonent based project
+        -- number of component can be used
+        4 file
+        -html
+        -scss
+        -ts
+        spec.ts
+
+Developement Steps
+        -- create an Angular project
+                -- Routing(y)
+                -- css/scc
+-Create a parent compmonent : Employee
+- create a child component : ng g c employee/employee-add
+                            ng g c employees/employee-list
+-- install bootsrap : npm install --save bootstrap@5.0.1
+-- create a model for employee : ng g cl employee     (class)
+                        -- fields are same as rest api json
+-- create a service for calling rest api 
+                -- ng g s shared/employee
+-- Goto Corresponding html to display data : employee.componet.html
+                employee.component.ts
+                here we nee to call service
