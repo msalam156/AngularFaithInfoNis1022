@@ -41,3 +41,41 @@ Developement Steps
 -- Goto Corresponding html to display data : employee.componet.html
                 employee.component.ts
                 here we nee to call service
+------------------------------------------------------------------
+date 3Dec2023
+
+Redux : state management rxjs
+-------------
+
+---Angular 
+        -- form --- Template Driven form
+                        -- TemplateReference Variable
+                        -- ngModel -- two way databinding
+                Reactive form
+                {{}} -interpolation
+                [] property binding
+                () event binding
+                [(ngModele)] - two way databinding
+
+        formsModel
+
+Rest Api --- SpringBoot / SpringMVC / ASP.NET CORE Web
+Angular ---- Component      -- Module
+         @ Component           -- NgModule
+         -- service
+                @injectable
+                        --methods -- get all
+                                  -- get by id
+                                  -- post
+                                  -- put
+                                  --delete
+
+                        -- environment.ts   -- apiURL: link with portnumber
+        -- Component.ts  -- inject service(constructor)
+        professor --add
+                -- post
+        professor -list
+                -- get
+                -- getById
+
+        

@@ -1,0 +1,45 @@
+<!-- <app-home></app-home> -->
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
+                <div class="logo-image">
+                    <img class="img-fluid" src="assets/img/hobby.png" alt="">
+
+                </div>
+                &nbsp;
+                <a href="#" class="navbar-brand">Nissan</a>
+
+                <!-- menu -->
+                <ul class="navbar-nav" routerLinkActive="active">
+                    <li class="nav-item">
+                        <a href="/home" class="nav-link" routerLInk="home">Home</a>
+                    </li>
+                </ul>
+                <!-- SignUp -->
+                <ul class="navbar-nav mr-auto" *ngIf="!isLoggedIn">
+                    <li class="nav-item">
+                        <a href="/home" class="nav-link" routerLInk="login">Login</a>
+                    </li>
+                </ul>
+                <!-- Logout-->
+                <ul class="navbar-nav mr-auto" >
+                    <li class="nav-item">
+                        <a href="" class="nav-link" (click)="logOut()">LogOut</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <span>All right reserved &#169;
+                2023
+                <a href="#">msansari156@gmail.com</a>
+            </span>
+        </div>
+    </footer>
+</div>

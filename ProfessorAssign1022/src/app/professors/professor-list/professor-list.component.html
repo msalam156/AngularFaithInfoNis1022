@@ -10,19 +10,27 @@
             <td>DOB</td>
             <td>Salary</td>
             <td>JoiningDate</td>
+            <td>Action</td>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let detail of professorService.professorsData">
-            <td>{{detail.professorId}}</td>
-            <td>{{detail.deptNo}}</td>
-            <td>{{detail.managerId}}</td>
-            <td>{{detail.firstName}}</td>
-            <td>{{detail.lastName}}</td>
-            <td>{{detail.gender}}</td>
-            <td>{{detail.dateOfBirth}}</td>
-            <td>{{detail.salary}}</td>
-            <td>{{detail.joiningDate}}</td>
+            <td (click)="populateForm(detail)">{{detail.professorId}}</td>
+            <td (click)="populateForm(detail)">{{detail.deptNo}}</td>
+            <td (click)="populateForm(detail)">{{detail.managerId}}</td>
+            <td (click)="populateForm(detail)">{{detail.firstName}}</td>
+            <td (click)="populateForm(detail)">{{detail.lastName}}</td>
+            <td (click)="populateForm(detail)">{{detail.gender}}</td>
+            <td (click)="populateForm(detail)">{{detail.dateOfBirth}}</td>
+            <td (click)="populateForm(detail)">{{detail.salary}}</td>
+            <td (click)="populateForm(detail)">{{detail.joiningDate}}</td>
+            <td>
+                <button class="btn btn-sm btn-outline-info" (click)="updateProfessor(detail.professorId)">
+                    e
+                </button>
+                <button class="btn btn-sm btn-outline-danger" (click)="deleteProfessor(detail.professorId)">X</button>
+
+            </td>
             <!-- <td>{{detail.}}</td> -->
         </tr>
     </tbody>

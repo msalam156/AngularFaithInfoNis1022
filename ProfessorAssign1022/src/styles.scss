@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+table tbody tr:hover{
+    background-color: rgb(195, 255, 234);
+    cursor: pointer;
+}
+.errorMessage{
+    // border-color: red;
+    // color: red;
+    border: 2px solid rgb(103, 123, 224);
+    font-weight: bolder;
+}
+.logo-img{
+    height: 23px;
+    width: 23px;
+    border-radius: 20%;
+}

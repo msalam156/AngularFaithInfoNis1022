@@ -11,6 +11,9 @@ import { EmployeeListComponent } from './employees/employee-list/employee-list.c
 import {HttpClientModule} from '@angular/common/http';
 import { EmployeeService } from './shared/employee.service';
 
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,9 @@ import { EmployeeService } from './shared/employee.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

@@ -7,5 +7,6 @@ export class Professor {
        salary: number = 0;
         joiningDate: Date = new Date(); 
         dateOfBirth: Date = new Date();
-        gender: string = ''; 
+        gender: string = '';
+        //isActive:boolean=true; 
 }

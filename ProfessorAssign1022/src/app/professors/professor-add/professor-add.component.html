@@ -1,0 +1,165 @@
+<!-- professorId deptNomanagerIdfirstNamelastNamegenderdateOfBirthsalaryjoiningDate -->
+
+<!-- template driven form  -->
+<form name="profForm" #form="ngForm" autocomplete="off"
+(ngSubmit)="onSubmit(form)">
+
+    <!-- professorId -->
+    <div class="form-group">
+        <input type="text" name="professorId" readonly [(ngModel)]="professorService.formProfessorDat.professorId">
+    </div>
+
+    <!-- deptNo -->
+    <div class="form-group">
+        <label>DeptNo:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="deptNo" #deptNo="ngModel" [(ngModel)]="professorService.formProfessorDat.deptNo"
+        type="number"
+            class="form-control" placeholder="Enter Professor Name" minlength="3" maxlength="25" required
+            [ngClass]="{'is-invalid':deptNo.touched && deptNo.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="deptNo.touched && deptNo.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="firstName.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">DeptNo is required !</span>
+        </div>
+    </div>
+    
+    <!-- managerId -->
+    <div class="form-group">
+        <label>ManagerId:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="managerId" #managerId="ngModel" [(ngModel)]="professorService.formProfessorDat.managerId"
+        type="number"
+            class="form-control" placeholder="Enter Professor Name" minlength="3" maxlength="25" required
+            [ngClass]="{'is-invalid':managerId.touched && managerId.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="managerId.touched && managerId.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="firstName.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">ManagerId is required!</span>
+        </div>
+    </div>
+
+    <!-- professorFirstName -->
+    <div class="form-group">
+        <label>Professor Name:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="firstName" #firstName="ngModel" [(ngModel)]="professorService.formProfessorDat.firstName"
+            class="form-control" placeholder="Enter Professor Name" minlength="3" maxlength="25" required
+            [ngClass]="{'is-invalid':firstName.touched && firstName.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="firstName.touched && firstName.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="firstName.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">First Name is required !</span>
+        </div>
+    </div>
+
+    <!-- LastName -->
+    <div class="form-group">
+        <label>Last Name:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="lastName" #lastName="ngModel" [(ngModel)]="professorService.formProfessorDat.lastName"
+            class="form-control" placeholder="Enter Professor Name" minlength="3" maxlength="25" required
+            [ngClass]="{'is-invalid':lastName.touched && lastName.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="lastName.touched && lastName.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="lastName.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">Last Name is required!</span>
+            <!--/div-->
+        </div>
+    </div>
+
+
+    <!-- gender -->
+    <div class="form-group">
+        <label>Gender:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="lastName" #gender="ngModel" [(ngModel)]="professorService.formProfessorDat.gender"
+            class="form-control" placeholder="Enter Professor Name" minlength="3" maxlength="25" required
+            [ngClass]="{'is-invalid':gender.touched && gender.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="gender.touched && gender.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="lastName.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">Please enter gender!</span>
+            <!--/div-->
+        </div>
+    </div>
+
+    <!-- date Of Birth -->
+    <div class="form-group">
+        <label>Date of Birth:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="dateOfBirth" #dateOfBirth="ngModel" [(ngModel)]="professorService.formProfessorDat.dateOfBirth"
+            class="form-control" placeholder="Enter Professor Name"  required
+            type="date"
+            [ngClass]="{'is-invalid':dateOfBirth.touched && dateOfBirth.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="dateOfBirth.touched && dateOfBirth.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="joiningDate.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">Date of Birth is required !</span>
+            <!--/div-->
+        </div>
+    </div>
+
+    <!-- data ofJOining -->
+    <div class="form-group">
+        <label>Date of Joining:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="joiningDate" #joiningDate="ngModel" [(ngModel)]="professorService.formProfessorDat.joiningDate"
+            class="form-control" placeholder="Enter Professor Name"  required
+            type="date"
+            [ngClass]="{'is-invalid':joiningDate.touched && joiningDate.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="joiningDate.touched && joiningDate.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="joiningDate.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">Phone number required !</span>
+            <!--/div-->
+        </div>
+    </div>
+
+    <!-- phone Salary -->
+    <div class="form-group">
+        <label>Salary:
+        </label>
+        <!-- // name and #nam should be sam -->
+        <input name="salary" #salary="ngModel" [(ngModel)]="professorService.formProfessorDat.salary"
+            type="number"
+            class="form-control" placeholder="Enter Professor Name" minlength="3" maxlength="25" required
+            [ngClass]="{'is-invalid':salary.touched && salary.invalid}" />
+        <!-- form validation erroe msg -->
+        <div class="validation-error" *ngIf="salary.touched && salary.invalid">
+            <!-- show error msg -->
+            <!-- <div *ngIf="salary.errors.required">  this is not working-->
+            <!--div *ngIf="firstName.errors.required"-->
+                <span class="errorMessage">Salaryn must be required !</span>
+            <!--/div-->
+        </div>
+    </div>
+    <!-- submit -->
+    <br>
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-primary form-control"
+        [disabled]="!(form.valid && form.dirty)"
+        >Submit</button>
+    </div>
+</form>
