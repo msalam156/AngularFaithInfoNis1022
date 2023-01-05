@@ -1,0 +1,20 @@
+
+<table class="table table-border table-striped">
+    <thead class="table ">
+        <tr>
+            <td>EmpId</td>
+            <td>Employee Name</td>
+            <td>Employee Age</td>
+            <td>DOB</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empList">
+            <td (click)="getDetails(emp)">{{emp.empId}}</td>
+            <td (click)="getDetails(emp)">{{emp.empName}}</td>
+            <td (click)="getDetails(emp)">{{emp.empAge}}</td>
+            <td (click)="getDetails(emp)">{{emp.DOB.toLocaleDateString()}}</td>
+        </tr>
+    </tbody>
+</table>
+

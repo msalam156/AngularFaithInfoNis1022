@@ -1,0 +1,20 @@
+<h1>Employee Details</h1>
+<!-- <div class="card">
+    <div class="card-body">
+
+        <span> Information {{dataEmpDetail}}</span>
+    </div>
+    <div class="row">
+        
+        <div class="col-5">
+            <button (click)="sendData()" class="btn btn-outline-dark">sendData</button>
+        </div>
+    </div>
+    </div> -->
+    <div>EmpId:{{selectData.empId}}</div>
+    <div>Name:{{selectData.empName}}</div>
+    <div>Age:{{selectData.empId}}</div>
+    <div>Date Of Birth:{{selectData.DOB.toLocaleDateString()}}</div>
+    <hr>
+    <button (click) ="fetchData()" class="btn btn-outline-success">FetchData</button>
+    
