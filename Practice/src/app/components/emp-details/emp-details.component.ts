@@ -25,6 +25,6 @@ export class EmpDetailsComponent implements OnInit {
 
   
   // sendData():void{
-  //   this.msgService.msg = this.dataEmpDetail;
+  //   this.msgService.msg = this.dataE
   // }
 }
